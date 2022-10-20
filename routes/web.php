@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/students', [ SchoolController::class, 'listStudents']);
+Route::get('/students', [ SchoolController::class, 'filterStudents']);
