@@ -12,5 +12,8 @@ class SchoolController extends Controller
         // store result
         $student = Student::with( "course" )->get();
 
+        echo "<pre>";
+        print_r($student);
+
     }
 }
