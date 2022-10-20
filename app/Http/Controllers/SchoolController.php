@@ -10,10 +10,12 @@ class SchoolController extends Controller
     public function listStudents() {
 
         // store result
-        $student = Student::with( "course" )->get();
+        $students = Student::with( "course" )->get();
 
-        echo "<pre>";
-        print_r($student);
+        foreach( $students as $student ) {
+            echo "<pre>";
+            print_r($student->name." | ".$student->course->course);
+        }
 
     }
 }
