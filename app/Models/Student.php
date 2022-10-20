@@ -13,6 +13,6 @@ class Student extends Model
     public function course() {
         //hasmany
 
-        return $this->hasMany(Course::class);
+        return $this->belongsTo(Course::class);
     }
 }
