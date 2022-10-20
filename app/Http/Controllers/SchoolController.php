@@ -12,10 +12,14 @@ class SchoolController extends Controller
         // store result
         $students = Student::with( "course" )->get();
 
-        foreach( $students as $student ) {
-            echo "<pre>";
-            print_r($student->name." | ".$student->course->course);
-        }
+        // foreach( $students as $student ) {
+        //     echo "<pre>";
+        //     print_r($student->name." | ".$student->course->course);
+        // }
+
+        return view("students", [
+            "students" => $students
+        ]);
 
     }
 }
