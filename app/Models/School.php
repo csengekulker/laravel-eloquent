@@ -9,7 +9,17 @@ class School extends Model
 {
     use HasFactory;
 
-    public function school() {
-        
+    public function course() {
+
+        return $this->hasMany(Course::class);
+
     }
+
+    public function student() {
+
+        return $this->belongsTo(Student::class);
+
+    }
+
+
 }
